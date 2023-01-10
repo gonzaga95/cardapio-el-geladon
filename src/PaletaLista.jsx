@@ -5,7 +5,7 @@ function PaletaLista() {
     return (
         <div className="PaletaLista">
             {paletas.map((paleta, index) => (
-                <div className="PaletaListaItem">
+                <div className="PaletaListaItem" key={`PaletaListaItem-${index}`}>
                     <div>
                         <div className="PaletaListaItem__titulo">
                             {" "}
