@@ -2,21 +2,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px 50px;
-  }
-  
-  @media (max-width: 1220px) {
+}
+
+@media (max-width: 1220px) {
     .PaletaLista {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
-  @media (max-width: 840px) {
+}
+
+@media (max-width: 840px) {
     .PaletaLista {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  
-  .PaletaListaItem {
+}
+
+.PaletaListaItem {
     font-family: "Exo";
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
@@ -24,42 +24,42 @@
     width: 315px;
     display: flex;
     justify-content: space-around;
-  }
-  
-  @media (max-width: 400px) {
+}
+
+@media (max-width: 400px) {
     .PaletaListaItem {
-      width: 210px;
-      height: 180px;
+        width: 210px;
+        height: 180px;
     }
-  }
-  
-  .PaletaListaItem > div {
+}
+
+.PaletaListaItem > div {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-  }
-  
-  .PaletaListaItem__titulo {
+}
+
+.PaletaListaItem__titulo {
     font-size: 1.5em;
     font-weight: 700;
     line-height: 100%;
-  }
-  
-  .PaletaListaItem__descricao {
+}
+
+.PaletaListaItem__descricao {
     font-size: 0.85em;
-  }
-  
-  .PaletaListaItem__preco {
+}
+
+.PaletaListaItem__preco {
     color: darkviolet;
-  }
-  
-  .Acoes {
+}
+
+.Acoes {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .Acoes__adicionar,
-  .Acoes__remover {
+}
+
+.Acoes__adicionar,
+.Acoes__remover {
     border: none;
     color: white;
     border-radius: 5px;
@@ -71,21 +71,38 @@
     text-transform: uppercase;
     cursor: pointer;
     width: 48%;
-  }
-  
-  .Acoes__remover {
+}
+
+.Acoes__remover {
     background-color: red;
-  }
-  
-  .Acoes__adicionar {
+}
+
+.Acoes__adicionar {
     background-color: darkviolet;
-  }
-  
-  .Acoes__adicionar--preencher {
+}
+
+.Acoes__adicionar--preencher {
     width: 100%;
-  }
-  
-  .PaletaListaItem__foto {
+}
+
+.PaletaListaItem__foto {
     height: 150px;
     margin-right: -60px;
-  }
+}
+
+.PaletaListaItem__badge {
+    background-color: greenyellow;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    color: black;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: -9px;
+    left: -9px;
+}
