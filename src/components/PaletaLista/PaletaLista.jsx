@@ -23,11 +23,14 @@ function PaletaLista() {
     return (
         <div className="PaletaLista">
             {paletas.map((paleta, index) => (
-                <PaletaListaItem 
-                key={`PaletaListaItem-${index}`}
-                index={index}
-                quantidadeSelecionada={paletaSelecionada[index]}
-                paleta={paleta}/>
+                <PaletaListaItem
+                    key={`PaletaListaItem-${index}`}
+                    index={index}
+                    quantidadeSelecionada={paletaSelecionada[index]}
+                    paleta={paleta}
+                    onRemove={(index) => removerItem(index)}
+                    onAdd={(index) => adicionarItem(index)}
+                />
             ))}
         </div>
     );
