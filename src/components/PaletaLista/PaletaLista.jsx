@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import "./PaletaLista.css";
 import { PaletaSerivce } from "services/PaletaService";
 import PaletaListaItem from "components/PaletaListaItem/PaletaListaItem";
+import PaletaDetalhesModal from "components/PaletaDetalhesModal/PaletaDetalhesModal";
 
 function PaletaLista() {
     const [paletas, setPaletas] = useState([]);
 
     const [paletaSelecionada, setPaletaSelecionada] = useState({});
+
+    const [paletaModal, setPaletaModal] = useState(false);
 
     const adicionarItem = (paletaIndex) => {
         const paleta = {
@@ -43,6 +46,12 @@ function PaletaLista() {
                     onAdd={(index) => adicionarItem(index)}
                 />
             ))}
+            {paletaModal && (
+                <PaletaDetalhesModal
+                    paleta={paletaModal}
+                    closeModal={() => setPaletaModal(false)}
+                />
+            )}
         </div>
     );
 }
