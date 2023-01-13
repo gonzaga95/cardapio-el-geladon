@@ -44,6 +44,7 @@ function PaletaLista() {
                     paleta={paleta}
                     onRemove={(index) => removerItem(index)}
                     onAdd={(index) => adicionarItem(index)}
+                    clickItem={(paletaId) => setPaletaModal(paleta)}
                 />
             ))}
             {paletaModal && (
