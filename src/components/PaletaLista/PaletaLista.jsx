@@ -33,6 +33,7 @@ function PaletaLista() {
     const getPaletaById = async (paletaId) => {
         const response = await PaletaSerivce.getById(paletaId);
         setPaletaModal(response);
+    };
 
     useEffect(() => {
         getLista();

@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import sacola from "assets/icons/sacola.svg";
-import paleta from "assets/icons/paleta.svg";
+// import paletaLogo from "assets/icons/paleta.svg";
 import logo from "assets/logo.svg";
 
 function Navbar({ createPaleta }) {
@@ -23,7 +23,7 @@ function Navbar({ createPaleta }) {
                         onClick={() => createPaleta()}
                     >
                         <img
-                            src={paleta}
+                            src={sacola}
                             alt="Adicionar paleta"
                             width="40px"
                             className="Paleta__icone"
