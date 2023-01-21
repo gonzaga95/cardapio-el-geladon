@@ -21,7 +21,7 @@ function AdicionaPaletaModal({ closeModal }) {
     return (
         <Modal closeModal={closeModal}>
             <div className="AdicionaPaletaModal">
-                <form autoComplete="false">
+                <form autoComplete="off">
                     <h2>Adicionar ao Cardápio</h2>
                     <div>
                         <label
