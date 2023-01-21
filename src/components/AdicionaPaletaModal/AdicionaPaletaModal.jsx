@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "components/Modal/Modal";
 
 import "./AdicionaPaletaModal.css";
@@ -18,7 +18,22 @@ function AdicionaPaletaModal({ closeModal }) {
         setState({ ...state, [name]: e.target.value });
     };
 
-    
+    const [canDisable, setCanDisable] = useState(true);
+
+    const canDisableSendButton = () => {
+        const response = !Boolean(
+            state.descricao.length &&
+                state.foto.length &&
+                state.sabor.length &&
+                state.preco.length
+        );
+
+        setCanDisable(response);
+    };
+
+    useEffect(() => {
+        canDisableSendButton();
+    });
 
     return (
         <Modal closeModal={closeModal}>
@@ -108,11 +123,13 @@ function AdicionaPaletaModal({ closeModal }) {
                             required
                         />
                     </div>
-                    <input
-                        type="submit"
+                    <button
                         className="AdicionaPaletaModal__enviar"
-                        value="Enviar"
-                    />
+                        type="button"
+                        disabled={canDisable}
+                    >
+                        Enviar
+                    </button>
                 </form>
             </div>
         </Modal>
