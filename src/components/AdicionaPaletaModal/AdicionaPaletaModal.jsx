@@ -18,6 +18,8 @@ function AdicionaPaletaModal({ closeModal }) {
         setState({ ...state, [name]: e.target.value });
     };
 
+    
+
     return (
         <Modal closeModal={closeModal}>
             <div className="AdicionaPaletaModal">
@@ -36,6 +38,7 @@ function AdicionaPaletaModal({ closeModal }) {
                             placeholder="R$ 1,00"
                             value={state.preco}
                             onChange={(e) => handleChange(e, "preco")}
+                            required
                         />
                     </div>
                     <div>
@@ -51,6 +54,7 @@ function AdicionaPaletaModal({ closeModal }) {
                             placeholder="Limão"
                             value={state.sabor}
                             onChange={(e) => handleChange(e, "sabor")}
+                            required
                         />
                     </div>
                     <div>
@@ -81,6 +85,7 @@ function AdicionaPaletaModal({ closeModal }) {
                             placeholder="Descreva o produto"
                             value={state.descricao}
                             onChange={(e) => handleChange(e, "descricao")}
+                            required
                         />
                     </div>
                     <div>
@@ -100,6 +105,7 @@ function AdicionaPaletaModal({ closeModal }) {
                             accept="image/png, image/gif, image/jpeg"
                             value={state.foto}
                             onChange={(e) => handleChange(e, "preco")}
+                            required
                         />
                     </div>
                     <input
