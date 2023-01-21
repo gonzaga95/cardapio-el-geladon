@@ -119,7 +119,7 @@ function AdicionaPaletaModal({ closeModal }) {
                             type="file"
                             accept="image/png, image/gif, image/jpeg"
                             value={state.foto}
-                            onChange={(e) => handleChange(e, "preco")}
+                            onChange={(e) => handleChange(e, "foto")}
                             required
                         />
                     </div>
