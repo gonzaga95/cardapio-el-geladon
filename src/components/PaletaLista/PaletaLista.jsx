@@ -41,7 +41,7 @@ function PaletaLista({ paletaCriada }) {
     };
 
     useEffect(() => {
-        if (paletaCriada) adicionaPaletaNaLista(paletaCriada);
+        if (paletaCriada) adicionaPaletaNaLista(paletaCriada)
     }, [paletaCriada]);
 
     useEffect(() => {
@@ -58,7 +58,7 @@ function PaletaLista({ paletaCriada }) {
                     paleta={paleta}
                     onRemove={(index) => removerItem(index)}
                     onAdd={(index) => adicionarItem(index)}
-                    clickItem={(paletaId) => setPaletaModal(paletaId)}
+                    clickItem={(paletaId) => getPaletaById(paletaId)}
                 />
             ))}
             {paletaModal && (

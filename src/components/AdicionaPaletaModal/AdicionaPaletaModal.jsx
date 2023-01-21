@@ -36,23 +36,23 @@ function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
     });
 
     const createPaleta = async () => {
-        const renomeiaCaminhoFoto = (fotoPath) => fotoPath.split('\\').pop();
-    
+        const renomeiaCaminhoFoto = (fotoPath) => fotoPath.split("\\").pop();
+
         const { sabor, recheio, descricao, preco, foto } = state;
-    
-        const titulo = sabor + (recheio && ' com ' + recheio);
-    
+
+        const titulo = sabor + (recheio && " com " + recheio);
+
         const paleta = {
             sabor: titulo,
             descricao,
             preco,
-            foto: `assets/images/${renomeiaCaminhoFoto(foto)}`
-        }
-    
+            foto: `assets/images/${renomeiaCaminhoFoto(foto)}`,
+        };
+
         const response = await PaletaService.create(paleta);
         onCreatePaleta(response);
         closeModal();
-    }
+    };
 
     return (
         <Modal closeModal={closeModal}>
@@ -146,6 +146,7 @@ function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
                         className="AdicionaPaletaModal__enviar"
                         type="button"
                         disabled={canDisable}
+                        onClick={createPaleta}
                     >
                         Enviar
                     </button>
